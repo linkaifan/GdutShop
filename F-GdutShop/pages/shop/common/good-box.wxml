@@ -1,0 +1,33 @@
+<!--pages/shop/common/good-box.wxml-->
+<view class='good'>
+    <view class='uploader'>
+        <view class='avatarBox'>
+            <image class='avatar' src=''></image>
+        </view>
+        <view class='upDet'>
+            <view class='upNickname'>{{upInfo.upnickName}}</view>
+            <view class='upTime'>{{upInfo.upTime}}</view>
+        </view>
+        <view class='price'>
+            <span class='priceCur'>￥</span>{{upInfo.upPrice}}
+        </view>
+    </view>
+    <view class='goodName'>{{upInfo.goodName}}</view>
+    <view class='goodDisc'>{{upInfo.goodDisc}}</view>
+    <view class='goodPicBox'>
+        <image class='goodPic'></image>
+        <image class='goodPic'></image>
+        <image class='goodPic'></image>
+        <image class='goodPic'></image>
+        <image class='goodPic'></image>
+        <image class='goodPic'></image>
+    </view>
+    <view class='goodDet'>
+    	<view class="msgBox">
+    		留言{{upInfo.msgNum}}
+    		<image class="msgIcon" src='/assets/icon/msg.png'
+    		wx:if="{{isDetail}}"></image>
+    	</view>
+         · 喜欢{{upInfo.likeNum}}<image class='likeIcon' src='/assets/icon/heart.png'></image>
+    </view>
+</view>

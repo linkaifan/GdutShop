@@ -1,0 +1,86 @@
+/* pages/shop/add/add.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    background: #ecedf1;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.mainBlock{
+    padding:10rpx 40rpx 30rpx 40rpx;
+    background: white;
+}
+.goodNameIpt{
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.goodDecIpt{
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    width: 100%;
+    height: 200rpx;
+}
+.picBox{
+    width: 140rpx;
+    height: 140rpx;
+    display: inline-block;
+    position: relative;
+    margin-right: 20rpx;
+}
+.pic{
+    width: 100%;
+    height: 100%;
+}
+.mainPicTips{
+    width: 100%;
+    height: 40rpx;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    text-align: center;
+    background: #41ae8e;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.priceInputBlock{
+    margin-top: 30rpx;
+    height: 90rpx;
+    padding: 0 40rpx;
+    background: white;
+    font-size: 30rpx;
+    position: relative;
+}
+.priceIptTips{
+    height: 90rpx;
+    line-height: 90rpx;
+    display: inline-block;
+    vertical-align: top;
+}
+.priceIpt{
+    height: 90rpx;
+    line-height: 90rpx;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    position: absolute;
+    right: 40rpx;
+}
+
+.addButton{
+    width: 650rpx;
+    height: 90rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+    line-height: 90rpx;
+    text-align: center;
+    color: white;
+    background: #41ae8e;
+    border-radius: 12rpx;
+}

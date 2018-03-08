@@ -1,0 +1,36 @@
+<!--pages/shop/message/message.wxml-->
+<view class='wrapper'>
+    <view class='mainBlock'>
+        <view class='msgItem'>
+            <view class='msgHead'>
+                <view class='avatarBox'>
+                    <image class='avatar' src=''></image>
+                </view>
+                <view class='msgAbout'>
+                    <view class='user'>微信昵称</view>
+                    <view class='time'>留言时间</view>
+                </view>
+            </view>
+            <view class='msgBody'>这是留言xxxxxxxx大概这么长这是留言xxxxxxxx大概这么长这是留言xxxxxxxx大概这么长</view>
+            <view class='picBox'>
+                <image class='pic' src=''></image>
+            </view>
+        </view>
+        <view class='msgItem'>
+            <view class='msgHead'>
+                <view class='avatarBox'>
+                    <image class='avatar' src=''></image>
+                </view>
+                <view class='msgAbout'>
+                    <view class='user'>微信昵称</view>
+                    <view class='time'>留言时间</view>
+                </view>
+            </view>
+            <view class='msgBody'>回复了你：这是回复的xxxxxx这是留言xxxxxxxx大概这么长这是留言xxxxxxxx大概这么长</view>
+            <view class='picBox'>
+                <image class='pic' src=''></image>
+            </view>
+        </view>
+        <view class='loadMore'>查看历史消息</view>
+    </view>
+</view>

@@ -1,0 +1,78 @@
+/* pages/shop/message/message.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    background: #ecedf1;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.mainBlock{
+    width: 100%;
+    background: white;
+}
+.msgItem{
+    padding: 30rpx 0;
+    margin: 0 30rpx;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.msgItem:nth-child(1){
+    border-top: none;
+}
+.msgHead{
+    width: 550rpx;
+    display: flex;
+}
+.avatarBox{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 6rpx;
+    background: #b4b4b4;
+}
+.avatar{
+    width: 100%;
+    height: 100%;
+}
+.msgAbout{
+    padding-left: 20rpx;
+}
+.user{
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 30rpx;
+}
+.time{
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: #838383;
+}
+.msgBody{
+    /* padding-left: 100rpx; */
+    padding: 20rpx 100rpx;
+    width: 400rpx;
+    font-size: 30rpx;
+}
+.picBox{
+    width: 140rpx;
+    height: 140rpx;
+    background: #b4b4b4;
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+}
+.pic{
+    width: 100%;
+    height: 100%;
+}
+.loadMore{
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 30rpx;
+    border: 1rpx solid rgba(0, 0, 0, 0.1);
+}

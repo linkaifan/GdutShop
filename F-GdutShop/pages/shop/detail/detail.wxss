@@ -1,0 +1,70 @@
+/* pages/shop/detail/detail.wxss */
+page{
+	background-color: #ecedf1;
+}
+.detailBox{
+	margin-bottom: 35rpx;
+}
+.msgBox{
+	padding: 25rpx 30rpx;
+	background-color: white;
+	margin-bottom: 40rpx;
+}
+.title{
+	border-bottom:1rpx solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 15rpx;
+}
+.msg{
+	padding-top: 20rpx;	
+	display: flex;
+	align-items: flex-start;
+}
+.avatarBox{
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 6rpx;
+	background-color: #b4b4b4;
+}
+.contentBox{
+	flex:1;
+	padding: 0 20rpx;
+}
+.nickName{
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.time{
+	color: #b4b4b4;
+	font-size: 12px;
+	margin-top: 20rpx;
+}
+.sendBox{
+	display: flex;
+	box-sizing: border-box;
+	background-color: white;
+	height: 92rpx;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding: 25rpx 20rpx;
+}
+.sendIpt{
+	height: 54rpx;
+	line-height: 54rpx;
+	font-size: 30rpx;
+	border-bottom: 1rpx solid rgba(0, 0, 0, 0.5);
+	text-indent:10rpx;
+	flex: 1;
+}
+.sendBtn{
+	font-size: 20rpx;
+	height: 54rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color: white;
+	background: #d0caca;
+	border-radius: 10rpx;
+	width: 100rpx;
+	font-size: 30rpx;
+	margin-left: 10rpx;
+}

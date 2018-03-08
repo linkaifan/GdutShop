@@ -1,0 +1,25 @@
+<view class="wrapper">
+    <view class='mainBlock'>
+        <view class='inputBlock'>
+            <input class='goodNameIpt' placeholder='标题  闲置宝贝的品类品牌型号等'></input>
+            <textarea class='goodDecIpt' placeholder='描述一下宝贝关注度更高哦~'></textarea>
+        </view>
+        <view class='picChoBlock'>
+            <view class='picBox' wx:for="{{pic}}" wx:for-index="index" wx:for-item="item" wx:key='{{index}}'>
+                <image class='pic'  src='{{pic[index]}}'></image>
+                <view class='mainPicTips'>主图</view>
+            </view>
+            <view class='picBox'>
+                <image class='pic' src='/assets/icon/addPic.png' bindtap='addPic'></image>
+            </view>
+            
+        </view>
+    </view>
+    <view class='priceInputBlock'>
+        <view class='priceIptTips'>价格</view>
+        <input class='priceIpt' placeholder='请输入价格/元'></input>
+    </view>
+    <view class='addButton'>
+        发布
+    </view>
+</view>

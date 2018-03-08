@@ -1,0 +1,67 @@
+<!--pages/shop/my-good/my-good.wxml-->
+<template name="item">
+	<view class="item">
+		<view class="{{cls}}-img img">
+			<image src='{{src}}'></image>
+		</view>
+		<view class="{{cls}}-text text">
+			<view class="{{cls}}-title title">{{title}}</view>	
+			<view class="{{cls}}-price price">{{price}}</view>
+			<view class="{{cls}}-msg msg">
+				{{msg}}
+			</view>	
+		</view>
+		<view class="{{cls}}-btn btn">
+			<view hidden="{{cls === 'like' ? true : false}}" class="{{cls}}-edit">编辑</view>
+			<view class="{{cls}}-delete">删除</view>
+		</view>
+	</view>
+</template>
+<template name="no-item">
+	<view class="no-item">
+		<view class="no-icon">
+			<image src="/assets/icon/cry.png"></image>
+		</view>
+		<view class="no-text">
+			您还没有{{activeTab === 'good'?'发布':'喜欢'}}的闲置宝贝...
+		</view>
+	</view>
+</template>
+<view class="wrapper">
+	<view class="me">
+		<view class="me-msg">
+			<view class='avatarBox'>
+	        	<image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+	        </view>
+	        <view class="meText">
+	        	<view>{{userInfo.nickName}}</view>
+	        	<view>让闲置有用起来				
+	        	</view>
+	        </view>
+		</view>
+        <navigator url="../add/add" open-type="navigate">发布闲置
+        <image src='/assets/icon/right.png'></image></navigator>
+	</view>
+	<view class="fenGe"></view>
+	<view class="my tab">
+		<view class="tabBtn">
+			<view class="{{activeTab === 'good'?'activeBtn':none}}" bindtap="goodTab">
+				我的宝贝
+			</view>
+			<view class="{{activeTab === 'like'?'activeBtn':none}}" bindtap="likeTab">
+				我的喜欢
+			</view>
+		</view>
+		<view class="tabGoods">
+			<view class="my-good" hidden="{{activeTab === 'like' ? true : false}}">
+				<template is="item"  wx:for="{{goods}}" wx:key="index" data="{{...item}}" ></template>
+
+				<template is="no-item" hidden="{{ goods.length !== 0 ? true : false}}" data="{{activeTab}}"></template>
+			</view>
+			<view class="my-like" hidden="{{activeTab === 'good' ? true : false}}">
+				<template is="item" wx:if="{{likes}}" wx:for="{{likes}}" wx:key="index" data="{{...item}}"></template>
+				<view hidden="{{ likes.length !== 0? true : false}}">无likes</view>
+			</view>
+		</view>
+	</view>
+</view>

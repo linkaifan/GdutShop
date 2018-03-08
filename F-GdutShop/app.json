@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/shop/index/index",
+    "pages/shop/add/add",
+    "pages/shop/message/message",
+    "pages/shop/detail/detail",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shop/my-good/my-good",
+    "pages/shop/common/good-box"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#41ae8e",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  }
+}

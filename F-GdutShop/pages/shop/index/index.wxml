@@ -1,0 +1,37 @@
+<!--pages/shop/index/index.wxml-->
+<view class='wrapper'>
+    <!-- <view class='roundPlay' bindtap='itemChange'>
+        <image wx:for='{{rpItem}}' wx:for-index="index" wx:for-item="item" wx:key='{{index}}' class='rpItem' style='left:{{(index-rpCurIndex)*750}}rpx' src='{{item.src}}'></image>
+    </view> -->
+    <swiper class='roundPlay' indicator-dots='true' indicator-color='#a0a0a0' indicator-active-color='#41ae8e' autoplay='true' interval='5000' duration='500' circular='true'>
+        <swiper-item class='rpItem' wx:for='{{rpItem}}' wx:for-index="index" wx:for-item="item" wx:key='{{index}}'>
+            <image class='rpItemImg' src='{{item.src}}'></image>
+        </swiper-item>
+    </swiper>
+    <view class='menu'>
+        <view class='menuItem' bindtap='toMessagePage'>
+            <view class='menuItemBox'>
+                <image class='menuItemImg' src='/assets/icon/ring.png'></image>
+                <view class='menuAlertNew'>{{newasItem}}</view>
+            </view>
+            <view class='menuItemText'>消息提示</view>
+        </view>
+        <view class='menuItem' bindtap='toMyGood'>
+            <view class='menuItemBox'>
+                <image class='menuItemImg' src='{{userInfo.avatarUrl}}'></image>
+            </view>
+            <view class='menuItemText'>我的闲置</view>
+        </view>
+        <view class='menuItem' bindtap='toAddPage'>
+            <view class='menuItemBox'>
+                <image class='menuItemImg' src='/assets/icon/add.png'></image>
+            </view>
+            <view class='menuItemText'>发布闲置</view>
+        </view>
+    </view>
+    <goodBox bindtap="toDetail"></goodBox>
+</view>
+
+<!-- <template name='rpItem'>
+    <image src=''></image>
+</template> -->

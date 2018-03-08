@@ -1,0 +1,83 @@
+/* pages/shop/index/index.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    background: #ecedf1;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*轮播部分*/
+.roundPlay{
+    width: 100%;
+    height: 300rpx;
+    background: white;
+    position: relative;
+}
+.rpItem{
+    width: 750rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: left 0.5s;
+}
+.rpItemImg{
+    width: 100%;
+    height: 100%;
+}
+
+/*菜单部分*/
+.menu{
+    /* width: 100%; */
+    height: 166rpx;
+    margin: 0 120rpx; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.menuItem{
+    /* width: 94rpx;
+    height: 94rpx;
+    border-radius: 50%;
+    background: #b4b4b4; */
+    /* width: 94rpx; */
+    /* margin-left: 114rpx; */
+    position: relative;
+}
+/* .menuItem:nth-child(1){
+    margin-left: 0;
+} */
+.menuItemBox{
+    width: 94rpx;
+    height: 94rpx;
+    border-radius: 50%;
+    background: #b4b4b4;
+    position: relative;
+    margin: 0 auto;
+}
+.menuItemText{
+    font-size: 24rpx;
+}
+
+.menuItemImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.menuAlertNew{
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 50%;
+    line-height: 35rpx;
+    text-align: center;
+    background: #e45555;
+    color: white;
+    font-size: 20rpx;
+    position: absolute;
+    top: 0;
+    right: -6rpx;
+}

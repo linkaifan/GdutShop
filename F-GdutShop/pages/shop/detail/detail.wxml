@@ -1,0 +1,35 @@
+<!--pages/shop/detail/detail.wxml-->
+<template name="msg">
+	<view class="msg">
+		<view class="avatarBox">
+			<image class="avatar" src=
+			''></image>
+		</view>
+		<view class="contentBox">
+			<view class="nickName">
+				{{nickName}}
+			</view>
+			<view class="content">
+				{{content}}
+			</view>
+			<view class="time">
+				{{time}}
+			</view>
+		</view>
+	</view>
+</template>
+<view class="wrapper">
+	<view class="detailBox">
+		<goodBox isDetail="true"></goodBox>
+	</view>
+	<view class="msgBox">
+		<view class="title">留言</view>
+		<template is="msg" wx:for="{{msg}}" wx:key="index" data="{{...item}}"></template>
+	</view>
+	<view class="sendBox">
+		<input class='sendIpt' placeholder='有什么疑问可以留言哦~'></input>
+		<view class='sendBtn'>
+		    发送
+		</view>
+	</view>
+</view>
