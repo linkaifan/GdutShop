@@ -5,15 +5,15 @@
             <image class='avatar' src=''></image>
         </view>
         <view class='upDet'>
-            <view class='upNickname'>{{upInfo.upnickName}}</view>
-            <view class='upTime'>{{upInfo.upTime}}</view>
+            <view class='upNickname'>{{goods.seller}}</view>
+            <view class='upTime'>{{goods.time}}</view>
         </view>
         <view class='price'>
-            <span class='priceCur'>￥</span>{{upInfo.upPrice}}
+            <span class='priceCur'>￥</span>{{goods.price}}
         </view>
     </view>
-    <view class='goodName'>{{upInfo.goodName}}</view>
-    <view class='goodDisc'>{{upInfo.goodDisc}}</view>
+    <view class='goodName'>{{goods.title}}</view>
+    <view class='goodDisc'>{{goods.des}}</view>
     <view class='goodPicBox'>
         <image class='goodPic'></image>
         <image class='goodPic'></image>
@@ -24,10 +24,10 @@
     </view>
     <view class='goodDet'>
     	<view class="msgBox">
-    		留言{{upInfo.msgNum}}
+    		留言{{goods.msgNum}}
     		<image class="msgIcon" src='/assets/icon/msg.png'
     		wx:if="{{isDetail}}"></image>
     	</view>
-         · 喜欢{{upInfo.likeNum}}<image class='likeIcon' src='/assets/icon/heart.png'></image>
+         · 喜欢{{goods.likeNum}}<image class='likeIcon' src='/assets/icon/heart.png'></image>
     </view>
 </view>

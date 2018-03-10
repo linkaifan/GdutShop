@@ -10,33 +10,8 @@ Page({
   data: {
     userInfo: {},
     activeTab:"good",//默认选项卡good
-    /*goods:[{
-      src:"",
-      cls:'good',
-      title:"苹果手机IPHONE X",
-      price:"￥7999",
-      msg:"留言10·喜欢5"
-    },{
-      src:"",
-      cls:'good',
-      title:"苹果手机IPHONE X",
-      price:"￥7999",
-      msg:"留言10·喜欢5"
-    }],*/
     goods:[],
-    likes:[{
-      src:"",
-      cls:'like',
-      title:"苹果手机IPHONE X",
-      price:"￥7999",
-      msg:"留言10·喜欢5"
-    },{
-      src:"",
-      cls:'like',
-      title:"苹果手机IPHONE X",
-      price:"￥7999",
-      msg:"留言10·喜欢5"
-    }]
+    likes:[]
   },
 
   /**
@@ -45,6 +20,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       userInfo: app.globalData.userInfo,
+      goods:app.globalData.goods,
     })
   },
 

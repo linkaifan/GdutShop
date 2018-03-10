@@ -8,7 +8,7 @@
 			<view class="{{cls}}-title title">{{title}}</view>	
 			<view class="{{cls}}-price price">{{price}}</view>
 			<view class="{{cls}}-msg msg">
-				{{msg}}
+				留言{{msgNum}}·喜欢{{likeNum}}
 			</view>	
 		</view>
 		<view class="{{cls}}-btn btn">
@@ -55,12 +55,15 @@
 		<view class="tabGoods">
 			<view class="my-good" hidden="{{activeTab === 'like' ? true : false}}">
 				<template is="item"  wx:for="{{goods}}" wx:key="index" data="{{...item}}" ></template>
-
-				<template is="no-item" hidden="{{ goods.length !== 0 ? true : false}}" data="{{activeTab}}"></template>
+				<view hidden="{{ goods.length !== 0? true : false}}">
+					<template is="no-item" data="{{activeTab}}"></template>
+				</view>
 			</view>
 			<view class="my-like" hidden="{{activeTab === 'good' ? true : false}}">
 				<template is="item" wx:if="{{likes}}" wx:for="{{likes}}" wx:key="index" data="{{...item}}"></template>
-				<view hidden="{{ likes.length !== 0? true : false}}">无likes</view>
+				<view hidden="{{ likes.length !== 0? true : false}}">
+					<template is="no-item" data="{{activeTab}}"></template>
+				</view>
 			</view>
 		</view>
 	</view>

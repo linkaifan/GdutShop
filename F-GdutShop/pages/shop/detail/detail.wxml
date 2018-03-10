@@ -20,7 +20,7 @@
 </template>
 <view class="wrapper">
 	<view class="detailBox">
-		<goodBox isDetail="true"></goodBox>
+		<goodBox goods="{{good}}" isDetail="true"></goodBox>
 	</view>
 	<view class="msgBox">
 		<view class="title">留言</view>

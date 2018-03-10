@@ -1,4 +1,5 @@
 // pages/shop/detail/detail.js
+const app = getApp()
 Page({
 
   /**
@@ -21,14 +22,18 @@ Page({
         content:"这是留言3\n",
         time:"留言时间3"
       },
-    ]
+    ],
+    good:{},
+    i:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      good:app.globalData.goods[i],
+    })
   },
 
   /**

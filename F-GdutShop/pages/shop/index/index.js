@@ -9,30 +9,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-        userInfo: {},
-        rpItem:[{
-            src:'/assets/icon/1.jpg'
-        },{
-            src:'/assets/icon/2.jpg'
-        },{
-            src:'/assets/icon/3.jpg'
-        }],
-        rpCurIndex:0,
-        newasItem:99,
+      userInfo: {},
+      newMsgNum:0,
+      goods:[],
+      rpItem:[{
+          src:'/assets/icon/1.jpg'
+      },{
+          src:'/assets/icon/2.jpg'
+      },{
+          src:'/assets/icon/3.jpg'
+      }],
+      rpCurIndex:0,
+      newasItem:99,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      let self = this
-      wx.getUserInfo({
-        success: function (res) {
-          app.globalData.userInfo = res.userInfo
-          self.setData({
-            userInfo: app.globalData.userInfo,
-          })
-        }
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        goods:app.globalData.goods,
+        newMsgNum:app.globalData.newMsg.length
       })
     },
 
@@ -40,7 +38,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        
+      
     },
 
     /**

@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+    let self = this
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -13,27 +14,37 @@ App({
       }
     })
     // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
+    wx.getUserInfo({
+      success: (res) => {
+        this.globalData.userInfo = res.userInfo       
       }
     })
+    
+    //闲置商品信息
+    this.globalData.goods.push({
+      cls:'good',
+      seller:'测试er',
+      time:'什么时候发布',
+      title:'苹果手机IPHONE X',
+      price:'7999',
+      des:'刚入手1一个月，99成新，xxxxxxxxxxxx大概这么长最多显示两行xxxxx详细的描述在详情页再显示......',
+      img:[1,2,3],
+      likeNum:5,
+      msgNum:10
+    }),
+    //新消息
+    this.globalData.newMsg.push({
+      avatarUrl:'jpg',
+      time:'',
+      content:'这是留言，这么长'
+    })
+    console.log(this.globalData)
   },
   globalData: {
-    
+    userInfo:null,
+    newMsg:[],
+    goods:[],
+    mySellItem:[],
+    allMsg:[],
   }
 })

@@ -29,7 +29,7 @@
             <view class='menuItemText'>发布闲置</view>
         </view>
     </view>
-    <goodBox bindtap="toDetail"></goodBox>
+    <goodBox goods="{{goods[0]}}" bindtap="toDetail"></goodBox>
 </view>
 
 <!-- <template name='rpItem'>
